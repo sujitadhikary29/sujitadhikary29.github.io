@@ -1,189 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sujit Adhikary | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #222;
-        }
+<title>Sujit Adhikary | Portfolio</title>
 
-        header {
-            background: #123b7a;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        header h1 {
-            font-size: 42px;
-            margin: 10px 0;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
 
-        header p {
-            font-size: 18px;
-        }
+header {
+    background: #123b7a;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
+header h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
 
-        section {
-            background: white;
-            margin-bottom: 25px;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
+header p {
+    font-size: 20px;
+}
 
-        h2 {
-            color: #123b7a;
-            border-bottom: 2px solid #123b7a;
-            padding-bottom: 8px;
-        }
+nav {
+    background: white;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-        .education {
-            width: 100%;
-            border-collapse: collapse;
-        }
+nav a {
+    text-decoration: none;
+    color: #123b7a;
+    margin: 0 12px;
+    font-weight: bold;
+}
 
-        .education th,
-        .education td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
+.container {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
 
-        .education th {
-            background: #123b7a;
-            color: white;
-        }
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
 
-        ul {
-            line-height: 1.8;
-        }
+h2 {
+    color: #123b7a;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #123b7a;
+    padding-bottom: 8px;
+}
 
-        .contact a {
-            color: #123b7a;
-            text-decoration: none;
-        }
+.education-box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-        footer {
-            text-align: center;
-            background: #123b7a;
-            color: white;
-            padding: 20px;
-        }
-    </style>
+.education-row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.education-row:last-child {
+    border-bottom: none;
+}
+
+.education-header {
+    background: #123b7a;
+    color: white;
+    font-weight: bold;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    background: #eaf1ff;
+    color: #123b7a;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.project {
+    border-left: 4px solid #123b7a;
+    padding: 15px;
+    margin-bottom: 18px;
+    background: #f8faff;
+    border-radius: 8px;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #123b7a;
+    text-decoration: none;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    background: #123b7a;
+    color: white;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+footer {
+    background: #123b7a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .education-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>SUJIT ADHIKARY</h1>
-    <p>Hardworking | Dedicated | Quick Learner</p>
+    <h1>Sujit Adhikary</h1>
+    <p>Customer Service Executive | Data Analysis</p>
 </header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <div class="container">
 
-    <section>
-        <h2>Career Objective</h2>
-        <p>
-            To obtain a suitable position in a reputed organization where I can
-            utilize my knowledge, skills and abilities in the best possible way
-            for the growth of the organization as well as myself.
-        </p>
-    </section>
+<section id="about">
+    <h2>Professional Summary</h2>
 
-    <section>
-        <h2>Educational Qualification</h2>
+    <p>
+        Motivated and detail-oriented professional with strong communication,
+        customer service, and basic data analysis skills. Proficient in
+        MS Excel, MS Word, PowerPoint, and basic computer applications.
+        Able to handle customer queries, maintain accurate records,
+        analyze data, and prepare reports. A quick learner with good
+        teamwork, time management, problem-solving, and organizational skills,
+        seeking an opportunity to contribute to a professional organization
+        and grow in the fields of customer service and data analysis.
+    </p>
+</section>
 
-        <table class="education">
-            <tr>
-                <th>Examination</th>
-                <th>Institution / Board</th>
-                <th>Year</th>
-                <th>Percentage</th>
-            </tr>
+<section id="skills">
+    <h2>Professional Skills</h2>
 
-            <tr>
-                <td>Madhyamik (10th)</td>
-                <td>Bagdah High School (W.B.B.S.E.)</td>
-                <td>2021</td>
-                <td>89%</td>
-            </tr>
+    <div class="skills">
+        <span class="skill">Quick Learner</span>
+        <span class="skill">Teamwork</span>
+        <span class="skill">Adaptability</span>
+        <span class="skill">Problem Solving</span>
+        <span class="skill">Time Management</span>
+    </div>
 
-            <tr>
-                <td>Higher Secondary (12th)</td>
-                <td>Bagdah High School (W.B.C.H.S.E.)</td>
-                <td>2023</td>
-                <td>80%</td>
-            </tr>
-        </table>
-    </section>
+    <br>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Basic Computer Knowledge</li>
-            <li>MS Word</li>
-            <li>MS Excel</li>
-            <li>PowerPoint</li>
-            <li>Internet & Email</li>
-            <li>Good Communication Skills</li>
-            <li>Quick Learner</li>
-            <li>Time Management</li>
-            <li>Team Work</li>
-        </ul>
-    </section>
+    <h2>Technical Skills</h2>
 
-    <section>
-        <h2>Strengths</h2>
-        <ul>
-            <li>Hardworking and Dedicated</li>
-            <li>Punctual and Honest</li>
-            <li>Quick Learner</li>
-            <li>Positive Attitude</li>
-            <li>Ability to Work in Team</li>
-        </ul>
-    </section>
+    <div class="skills">
+        <span class="skill">MS Office</span>
+        <span class="skill">MS Word</span>
+        <span class="skill">MS Excel</span>
+        <span class="skill">PowerPoint</span>
+        <span class="skill">Canva</span>
+        <span class="skill">Qualitative & Quantitative Data Analysis</span>
+    </div>
+</section>
 
-    <section>
-        <h2>Hobbies</h2>
-        <ul>
-            <li>Listening to Music</li>
-            <li>Playing Outdoor Games</li>
-            <li>Learning New Things</li>
-        </ul>
-    </section>
+<section id="education">
+    <h2>Education Qualification</h2>
 
-    <section class="contact">
-        <h2>Contact</h2>
+    <div class="education-box">
 
-        <p>📞 <strong>Phone:</strong> 7866976362</p>
+        <div class="education-row education-header">
+            <div>Institution</div>
+            <div>Qualification</div>
+            <div>Year</div>
+            <div>Percentage</div>
+        </div>
 
-        <p>📧 <strong>Email:</strong>
-            <a href="mailto:sujitadhikary655@gmail.com">
-                sujitadhikary655@gmail.com
-            </a>
-        </p>
+        <div class="education-row">
+            <div>West Bengal State University</div>
+            <div>B.A. (General)</div>
+            <div>2026</div>
+            <div>63.14%</div>
+        </div>
 
-        <p>📍 <strong>Location:</strong> Bagdah, North 24 Parganas, West Bengal</p>
+        <div class="education-row">
+            <div>Bagdah High School</div>
+            <div>Higher Secondary</div>
+            <div>2023</div>
+            <div>80%</div>
+        </div>
 
-        <p>
-            🔗 <strong>GitHub:</strong>
-            <a href="https://github.com/sujitadhikary29" target="_blank">
-                github.com/sujitadhikary29
-            </a>
-        </p>
-    </section>
+        <div class="education-row">
+            <div>Bagdah High School</div>
+            <div>Madhyamik</div>
+            <div>2021</div>
+            <div>89%</div>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>Technical Project – MIS</h3>
+        <p>Prepared and organized MIS data using MS Excel.</p>
+        <p>Worked with data records and reporting formats.</p>
+        <p>Supported basic analysis and presentation of information.</p>
+    </div>
+
+    <div class="project">
+        <h3>Non-Technical Project – ASL</h3>
+        <p>Participated in an American Sign Language (ASL) learning project.</p>
+        <p>Practiced communication, teamwork, and presentation skills.</p>
+    </div>
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+
+    <div class="project">
+        <h3>IBM</h3>
+        <p>CCSS_AI</p>
+    </div>
+</section>
+
+<section>
+    <h2>Languages</h2>
+
+    <div class="skills">
+        <span class="skill">Bengali – Native</span>
+        <span class="skill">English – Fluent</span>
+        <span class="skill">Hindi – Conversational</span>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+
+    <p><strong>Phone:</strong> 7866976362</p>
+
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:sujitadhikary655@gmail.com">
+            sujitadhikary655@gmail.com
+        </a>
+    </p>
+
+    <p><strong>Place:</strong> Bagdah</p>
+
+    <div class="buttons">
+        <a class="button"
+           href="https://www.linkedin.com/in/sujit-adhikary-7b1170334/"
+           target="_blank">
+           LinkedIn
+        </a>
+
+        <a class="button"
+           href="https://github.com/sujitadhikary29"
+           target="_blank">
+           GitHub
+        </a>
+    </div>
+</section>
+
+<section>
+    <h2>Declaration</h2>
+
+    <p>
+        I hereby declare that the information provided above is true and
+        correct to the best of my knowledge and belief.
+    </p>
+
+    <br>
+
+    <p><strong>Date:</strong> 03.10.2026</p>
+    <p><strong>Place:</strong> Bagdah</p>
+    <p><strong>Signature:</strong> Sujit Adhikary</p>
+</section>
 
 </div>
 
